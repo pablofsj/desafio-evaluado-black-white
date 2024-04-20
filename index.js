@@ -7,7 +7,7 @@ const app = express()
 // ruta absoluta
 const __dirname = import.meta.dirname
 
-// middleware
+// middleware archivos estáticos
 app.use(express.static('public'))
 app.use('/assets/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'))
 app.use('/assets/js', express.static(path.join(__dirname, '/node_modules/bootstrap/dist/js')))
