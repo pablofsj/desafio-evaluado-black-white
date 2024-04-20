@@ -1,1 +1,11 @@
-<h1>Home Page</h1>
+<h1>{{ title }}</h1>
+
+{{#if user}}
+
+<h2>Hola! {{user}}</h2>
+
+{{else}}
+
+<h2>Hola! anónimo</h2>
+
+{{/if }}
