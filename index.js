@@ -25,7 +25,7 @@ app.set("view engine", ".hbs");
 app.set("views", __dirname + "/views");
 
 app.get("/", (req, res) => {
-  res.render("home", { title: "Convertidor de imagenes a blanco y negro" });
+  res.render("home", { title: "Conversor de imagenes a blanco y negro" });
 });
 
 app.get("/image", async (req, res) => {
@@ -50,8 +50,9 @@ app.get("/image", async (req, res) => {
   }
 });
 
-
-
+app.get('*', (_, res) => {
+    return res.status(404).render('404', { title: "Página no encontrada" })
+})
 
 
 const PORT = process.env.PORT || 3000;
